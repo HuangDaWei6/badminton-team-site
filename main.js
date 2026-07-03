@@ -30,6 +30,8 @@
     setText("[data-hero-copy]", data.hero.copy);
     setLinks("[data-line-link]", data.links.line);
     setLinks("[data-form-link]", data.links.googleForm);
+    setLinks("[data-instagram-link]", data.links.instagram);
+    setLinks("[data-facebook-link]", data.links.facebook);
 
     const stats = $("#hero-stats");
     data.hero.stats.forEach((stat) => {
@@ -55,6 +57,28 @@
       coach.credentials.forEach((item) => list.append(createElement("li", "", item)));
       body.append(list);
       card.append(image, body);
+      target.append(card);
+    });
+  }
+
+  function renderSportTracks() {
+    const target = $("#program-list");
+    if (!target) return;
+
+    data.sportTracks.forEach((track) => {
+      const card = createElement("article", "program-card");
+      card.append(
+        createElement("p", "card-kicker", track.kicker),
+        createElement("h3", "", track.name),
+        createElement("p", "", track.copy)
+      );
+
+      const list = createElement("ul", "clean-list");
+      track.items.forEach((item) => list.append(createElement("li", "", item)));
+
+      const link = createElement("a", "button button-small", track.action);
+      link.href = track.target;
+      card.append(list, link);
       target.append(card);
     });
   }
@@ -154,6 +178,7 @@
   }
 
   renderHero();
+  renderSportTracks();
   renderCoaches();
   renderPhilosophy();
   renderPricing();

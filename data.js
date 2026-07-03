@@ -1,48 +1,135 @@
 window.siteData = {
-  siteName: "飛躍羽球團隊",
+  siteName: "羽翼",
   hero: {
-    kicker: "專業羽球教學與團練開團",
-    title: "把每一次揮拍，練成下一分的把握。",
+    kicker: "羽球與匹克球課程",
+    title: "一拍打出默契，一起展開羽翼",
     copy:
-      "從基礎腳步、發接發到雙打輪轉，依照程度安排訓練節奏，讓成人與青少年都能看見穩定進步。",
+      "羽翼同時經營羽球與匹克球課程，從兒童、成人初學到進階訓練，都能依照程度、目標與時段安排適合的上課方式。",
     stats: [
-      { label: "課程型態", value: "1 對 1 / 小班 / 團練" },
-      { label: "適合程度", value: "初學到進階" },
+      { label: "課程項目", value: "羽球 / 匹克球" },
+      { label: "適合程度", value: "兒童、成人初學到進階" },
       { label: "報名方式", value: "LINE 或 Google 表單" }
     ]
   },
+  sportTracks: [
+    {
+      name: "羽球課程",
+      kicker: "Badminton",
+      copy: "從握拍、步伐、發接發到雙打輪轉，依程度安排私人課、小班課與團練，適合想打穩基本功或提升實戰能力的學員。",
+      items: ["兒童團體班與長期培訓", "成人練打與實戰訓練", "一對一、親子班與小班課"],
+      action: "查看羽球教練",
+      target: "#coaches"
+    },
+    {
+      name: "匹克球課程",
+      kicker: "Pickleball",
+      copy: "規則簡單、容易上手，結合羽球、網球與桌球特色，適合大朋友小朋友一起體驗，也適合新手建立揮拍與對戰節奏。",
+      items: ["新手體驗課", "4 人開班、6 人滿班", "揮拍、對戰與規則入門"],
+      action: "查看開團資訊",
+      target: "#sessions"
+    }
+  ],
   links: {
     line: "https://line.me/R/ti/p/@your-line-id",
     googleForm: "https://forms.gle/your-google-form-id",
-    instagram: "https://www.instagram.com/your_account"
+    instagram: "https://www.instagram.com/wings_badminton_hub/",
+    facebook: "https://www.facebook.com/p/%E7%BE%BD%E7%BF%BC%E7%BE%BD%E7%90%83-61584314604572/"
   },
   coaches: [
     {
-      name: "林教練",
-      title: "成人與青少年羽球教練",
-      image:
-        "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=900&q=80",
+      name: "詹宜如教練",
+      title: "孩子們的最愛",
+      image: "./assets/coaches/coach-01.jpg",
       credentials: [
-        "具 8 年以上教學與團練帶隊經驗",
-        "擅長雙打輪轉、步伐銜接與比賽策略",
-        "長期協助初學者建立正確揮拍與擊球節奏"
+        "擅長把複雜動作轉化成好玩的遊戲",
+        "適合兒童入門與長期培訓",
+        "在輕鬆互動中建立基本功"
       ]
     },
     {
-      name: "陳教練",
-      title: "體能與基本功訓練教練",
-      image:
-        "https://images.unsplash.com/photo-1613918431703-aa50889e3be0?auto=format&fit=crop&w=900&q=80",
+      name: "賴玄耀教練",
+      title: "品格與球技兼具",
+      image: "./assets/coaches/coach-02.jpg",
       credentials: [
-        "專注腳步啟動、核心穩定與場上移動效率",
-        "可依學員程度調整訓練強度",
-        "協助建立可持續練習的課後訓練菜單"
+        "具裁判證專業背景",
+        "重視運動員品格與紀律",
+        "用幽默氛圍提升反應與球品"
+      ]
+    },
+    {
+      name: "黃大維教練",
+      title: "球場上的體能專家",
+      image: "./assets/coaches/coach-03.jpg",
+      credentials: [
+        "甲組球員背景",
+        "擅長高強度訓練安排",
+        "強化速度、穩定度與場上判斷"
+      ]
+    },
+    {
+      name: "張晉權教練",
+      title: "耐心引導型教練",
+      image: "./assets/coaches/coach-04.jpg",
+      credentials: [
+        "以耐心觀察學員細節",
+        "提供即時反饋與示範",
+        "適合喜歡輕鬆氛圍的學員"
+      ]
+    },
+    {
+      name: "張旭廷教練",
+      title: "實戰應用領航員",
+      image: "./assets/coaches/coach-05.jpg",
+      credentials: [
+        "具系隊與社團帶隊經驗",
+        "結合基礎動作與實戰情境",
+        "強調清楚示範與即時指導"
+      ]
+    },
+    {
+      name: "潘澤民教練",
+      title: "因材施教型教練",
+      image: "./assets/coaches/coach-06.jpg",
+      credentials: [
+        "依學員狀況量身調整訓練",
+        "協助建立適合自己的打球節奏",
+        "在快樂氛圍中建立正確姿勢"
+      ]
+    },
+    {
+      name: "陳翰陞教練",
+      title: "賽場戰術家",
+      image: "./assets/coaches/coach-07.jpg",
+      credentials: [
+        "實戰與比賽經驗豐富",
+        "擅長擊球節奏與輪轉觀念分析",
+        "協助學員打得穩，也打得聰明"
+      ]
+    },
+    {
+      name: "黃豊育教練",
+      title: "穩定輸出專家",
+      image: "./assets/coaches/coach-08.jpg",
+      credentials: [
+        "重視發力與跑位邏輯",
+        "強調動作核心建構",
+        "協助學員提升穩定回擊能力"
+      ]
+    },
+    {
+      name: "陳冠禔教練",
+      title: "基礎細節教練",
+      image: "./assets/coaches/coach-09.jpg",
+      credentials: [
+        "擅長建立穩定擊球節奏",
+        "重視標準動作與細節修正",
+        "透過實戰連結建立正確觀念"
       ]
     }
   ],
   philosophy: {
     intro:
-      "訓練不只追求打得更用力，而是把動作、判斷與節奏整合起來。每堂課都會保留可觀察的目標，讓學員知道自己正在進步哪一件事。",
+      "不論是羽球還是匹克球，訓練都不只追求打得更用力，而是把動作、判斷與節奏整合起來。每堂課都會保留可觀察的目標，讓學員知道自己正在進步哪一件事。",
     points: [
       {
         title: "動作先穩，再追求速度",
@@ -50,44 +137,44 @@ window.siteData = {
       },
       {
         title: "課程依程度分層",
-        copy: "初學者重視握拍、發球與米字步；進階學員加強連貫、多拍與雙打站位。"
+        copy: "初學者重視握拍、發球與移動；進階學員加強連貫、多拍、站位與對戰判斷。"
       },
       {
         title: "讓訓練貼近實戰",
-        copy: "每個技術都會連到比賽情境，包含接發球、前後場轉換、攻防選擇與搭檔配合。"
+        copy: "每個技術都會連到對戰情境，包含接發球、攻防轉換、落點選擇與搭檔配合。"
       }
     ]
   },
   pricing: [
     {
-      name: "單堂私人課",
+      name: "羽球私人課",
       price: "NT$ 1,200 起",
       note: "1 對 1 客製化訓練，適合快速修正動作。",
       items: ["60 分鐘", "課前程度評估", "課後練習建議"]
     },
     {
-      name: "雙人課",
+      name: "羽球小班 / 親子班",
       price: "NT$ 1,800 起",
       note: "適合朋友、親子或固定搭檔一起練習。",
       items: ["90 分鐘", "雙打配合訓練", "共同目標安排"]
     },
     {
-      name: "小班團課",
-      price: "NT$ 600 / 人起",
-      note: "3 至 6 人開班，兼顧技術訓練與對練。",
-      items: ["90 分鐘", "依程度分組", "含多球與實戰練習"]
+      name: "匹克球體驗課",
+      price: "NT$ 500 起",
+      note: "規則簡單、容易上手，適合新手與親子一起體驗。",
+      items: ["新手入門", "4 人開班、6 人滿班", "揮拍、對戰與規則教學"]
     }
   ],
   locations: [
     {
-      name: "台北市運動中心",
-      address: "請替換為實際場館地址",
-      time: "平日晚上、週末上午可約"
+      name: "奧創體育 - 板橋館",
+      address: "新北市板橋區中正路375巷1號2樓",
+      time: "兒童團體班、成人練打班"
     },
     {
-      name: "新北合作球館",
-      address: "請替換為實際場館地址",
-      time: "依開團資訊公告"
+      name: "板橋羽球館",
+      address: "新北市板橋區橋中一街125巷14弄1-2號",
+      time: "羽球課程與匹克球體驗課"
     }
   ],
   promotions: [
@@ -102,20 +189,28 @@ window.siteData = {
   ],
   sessions: [
     {
-      title: "週三晚間基礎團練",
-      level: "初學至初中階",
-      date: "每週三 19:30-21:00",
-      location: "台北市運動中心",
+      title: "羽球兒童團體班",
+      level: "初階 / 進階",
+      date: "週末常態班",
+      location: "奧創體育 - 板橋館、板橋羽球館",
       status: "招募中",
-      formLabel: "報名此團"
+      formLabel: "詢問班級"
     },
     {
-      title: "週六雙打實戰團",
-      level: "中階以上",
-      date: "每週六 10:00-12:00",
-      location: "新北合作球館",
-      status: "候補登記",
-      formLabel: "加入候補"
+      title: "羽球成人練打班",
+      level: "初階 / 中階 / 高階",
+      date: "依 IG 公告時段",
+      location: "奧創體育 - 板橋館、板橋羽球館",
+      status: "開放詢問",
+      formLabel: "詢問時段"
+    },
+    {
+      title: "匹克球體驗課",
+      level: "新手友善",
+      date: "依 IG 開課公告",
+      location: "板橋羽球館",
+      status: "開放報名",
+      formLabel: "報名體驗"
     }
   ],
   trainingVideos: [
@@ -163,7 +258,8 @@ window.siteData = {
     items: [
       { label: "LINE", value: "@your-line-id" },
       { label: "Email", value: "coach@example.com" },
-      { label: "Instagram", value: "@your_account" }
+      { label: "Instagram", value: "@wings_badminton_hub" },
+      { label: "Facebook", value: "羽翼羽球" }
     ]
   },
   partners: []
