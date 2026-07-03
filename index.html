@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="專業羽球教學、團練開團、成人與青少年課程，提供 LINE 諮詢與 Google 表單報名。"
+    >
+    <title>飛躍羽球團隊 | Badminton Training Team</title>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="回到首頁">
+        <span class="brand-mark"></span>
+        <span>
+          <strong data-site-name>飛躍羽球團隊</strong>
+          <small>Badminton Training Team</small>
+        </span>
+      </a>
+      <nav class="site-nav" aria-label="主要導覽">
+        <a href="#coaches">教練</a>
+        <a href="#pricing">價目</a>
+        <a href="#sessions">開團</a>
+        <a href="#videos">影片</a>
+        <a href="#contact">聯絡</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-band">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow" data-hero-kicker>專業羽球教學與團練開團</p>
+          <h1 data-hero-title>把每一次揮拍，練成下一分的把握。</h1>
+          <p class="hero-copy" data-hero-copy>
+            從基礎腳步、發接發到雙打輪轉，依照程度安排訓練節奏，讓成人與青少年都能看見穩定進步。
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" data-line-link href="#" target="_blank" rel="noopener">LINE 諮詢</a>
+            <a class="button button-secondary" data-form-link href="#" target="_blank" rel="noopener">填寫報名表</a>
+          </div>
+          <dl class="hero-stats" id="hero-stats" aria-label="團隊重點數據"></dl>
+        </div>
+      </section>
+
+      <section class="section" id="coaches">
+        <div class="section-heading">
+          <p class="eyebrow">Coaches</p>
+          <h2>教練資歷</h2>
+        </div>
+        <div class="coach-grid" id="coach-list"></div>
+      </section>
+
+      <section class="section split-section" id="philosophy">
+        <div class="section-heading">
+          <p class="eyebrow">Training Philosophy</p>
+          <h2>教學理念</h2>
+        </div>
+        <div class="philosophy-panel">
+          <p data-philosophy-intro></p>
+          <div class="feature-grid" id="philosophy-list"></div>
+        </div>
+      </section>
+
+      <section class="section section-band" id="pricing">
+        <div class="section-heading">
+          <p class="eyebrow">Pricing</p>
+          <h2>課程價目表</h2>
+        </div>
+        <div class="pricing-grid" id="pricing-list"></div>
+      </section>
+
+      <section class="section two-column" id="locations">
+        <div>
+          <div class="section-heading">
+            <p class="eyebrow">Locations</p>
+            <h2>教學地點</h2>
+          </div>
+          <div class="location-list" id="location-list"></div>
+        </div>
+        <aside class="promo-panel" id="promo-list" aria-label="優惠活動"></aside>
+      </section>
+
+      <section class="section section-band" id="sessions">
+        <div class="section-heading">
+          <p class="eyebrow">Open Sessions</p>
+          <h2>近期開團資訊</h2>
+        </div>
+        <div class="session-list" id="session-list"></div>
+      </section>
+
+      <section class="section" id="videos">
+        <div class="section-heading">
+          <p class="eyebrow">Videos</p>
+          <h2>教球影片</h2>
+        </div>
+        <div class="video-grid" id="training-video-list"></div>
+      </section>
+
+      <section class="section section-band" id="archive">
+        <div class="section-heading">
+          <p class="eyebrow">Archive</p>
+          <h2>過往影片</h2>
+        </div>
+        <div class="video-grid" id="archive-video-list"></div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-copy">
+          <p class="eyebrow">Contact</p>
+          <h2>聯絡與報名</h2>
+          <p data-contact-copy></p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" data-line-link href="#" target="_blank" rel="noopener">LINE 諮詢</a>
+          <a class="button button-secondary" data-form-link href="#" target="_blank" rel="noopener">Google 表單報名</a>
+        </div>
+        <div class="contact-list" id="contact-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span data-footer-name>飛躍羽球團隊</span>
+      <span>專業羽球教學、團練開團與合作課程</span>
+    </footer>
+
+    <script src="./data.js"></script>
+    <script src="./main.js"></script>
+  </body>
+</html>

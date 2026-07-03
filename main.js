@@ -1,0 +1,165 @@
+(function () {
+  const data = window.siteData;
+
+  const $ = (selector, root = document) => root.querySelector(selector);
+  const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
+
+  function setText(selector, value) {
+    const element = $(selector);
+    if (element) element.textContent = value;
+  }
+
+  function setLinks(selector, value) {
+    $$(selector).forEach((element) => {
+      element.href = value;
+    });
+  }
+
+  function createElement(tag, className, text) {
+    const element = document.createElement(tag);
+    if (className) element.className = className;
+    if (text) element.textContent = text;
+    return element;
+  }
+
+  function renderHero() {
+    setText("[data-site-name]", data.siteName);
+    setText("[data-footer-name]", data.siteName);
+    setText("[data-hero-kicker]", data.hero.kicker);
+    setText("[data-hero-title]", data.hero.title);
+    setText("[data-hero-copy]", data.hero.copy);
+    setLinks("[data-line-link]", data.links.line);
+    setLinks("[data-form-link]", data.links.googleForm);
+
+    const stats = $("#hero-stats");
+    data.hero.stats.forEach((stat) => {
+      const item = createElement("div", "stat-item");
+      item.append(createElement("dt", "", stat.label), createElement("dd", "", stat.value));
+      stats.append(item);
+    });
+  }
+
+  function renderCoaches() {
+    const target = $("#coach-list");
+    data.coaches.forEach((coach) => {
+      const card = createElement("article", "coach-card");
+      const image = createElement("img");
+      image.src = coach.image;
+      image.alt = coach.name;
+      image.loading = "lazy";
+
+      const body = createElement("div", "coach-body");
+      body.append(createElement("p", "card-kicker", coach.title), createElement("h3", "", coach.name));
+
+      const list = createElement("ul", "clean-list");
+      coach.credentials.forEach((item) => list.append(createElement("li", "", item)));
+      body.append(list);
+      card.append(image, body);
+      target.append(card);
+    });
+  }
+
+  function renderPhilosophy() {
+    setText("[data-philosophy-intro]", data.philosophy.intro);
+    const target = $("#philosophy-list");
+    data.philosophy.points.forEach((point) => {
+      const item = createElement("article", "feature-card");
+      item.append(createElement("h3", "", point.title), createElement("p", "", point.copy));
+      target.append(item);
+    });
+  }
+
+  function renderPricing() {
+    const target = $("#pricing-list");
+    data.pricing.forEach((plan) => {
+      const card = createElement("article", "price-card");
+      card.append(createElement("h3", "", plan.name), createElement("p", "price", plan.price), createElement("p", "", plan.note));
+
+      const list = createElement("ul", "clean-list");
+      plan.items.forEach((item) => list.append(createElement("li", "", item)));
+      card.append(list);
+      target.append(card);
+    });
+  }
+
+  function renderLocationsAndPromos() {
+    const locations = $("#location-list");
+    data.locations.forEach((location) => {
+      const item = createElement("article", "location-item");
+      item.append(
+        createElement("h3", "", location.name),
+        createElement("p", "", location.address),
+        createElement("span", "meta-line", location.time)
+      );
+      locations.append(item);
+    });
+
+    const promos = $("#promo-list");
+    promos.append(createElement("p", "eyebrow", "Promotions"), createElement("h2", "", "優惠活動"));
+    data.promotions.forEach((promo) => {
+      const item = createElement("article", "promo-item");
+      item.append(createElement("h3", "", promo.title), createElement("p", "", promo.copy));
+      promos.append(item);
+    });
+  }
+
+  function renderSessions() {
+    const target = $("#session-list");
+    data.sessions.forEach((session) => {
+      const card = createElement("article", "session-card");
+      const info = createElement("div", "session-info");
+      info.append(
+        createElement("span", "status-pill", session.status),
+        createElement("h3", "", session.title),
+        createElement("p", "", `${session.level} | ${session.date} | ${session.location}`)
+      );
+
+      const link = createElement("a", "button button-small", session.formLabel);
+      link.href = data.links.googleForm;
+      link.target = "_blank";
+      link.rel = "noopener";
+      card.append(info, link);
+      target.append(card);
+    });
+  }
+
+  function renderVideos(items, selector) {
+    const target = $(selector);
+    items.forEach((video) => {
+      const link = createElement("a", "video-card");
+      link.href = video.url;
+      link.target = "_blank";
+      link.rel = "noopener";
+
+      const image = createElement("img");
+      image.src = video.thumbnail;
+      image.alt = video.title;
+      image.loading = "lazy";
+
+      const body = createElement("span", "video-body");
+      body.append(createElement("span", "card-kicker", video.category), createElement("strong", "", video.title));
+      link.append(image, body);
+      target.append(link);
+    });
+  }
+
+  function renderContact() {
+    setText("[data-contact-copy]", data.contact.copy);
+    const target = $("#contact-list");
+    data.contact.items.forEach((item) => {
+      const row = createElement("div", "contact-item");
+      row.append(createElement("span", "", item.label), createElement("strong", "", item.value));
+      target.append(row);
+    });
+  }
+
+  renderHero();
+  renderCoaches();
+  renderPhilosophy();
+  renderPricing();
+  renderLocationsAndPromos();
+  renderSessions();
+  renderVideos(data.trainingVideos, "#training-video-list");
+  renderVideos(data.archiveVideos, "#archive-video-list");
+  renderContact();
+})();
