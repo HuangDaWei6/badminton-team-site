@@ -215,41 +215,42 @@ window.siteData = {
   ],
   trainingVideos: [
     {
-      title: "正手高遠球基本架構",
-      category: "基礎動作",
-      thumbnail:
-        "https://images.unsplash.com/photo-1612872087720-bb876e2e67d1?auto=format&fit=crop&w=900&q=80",
-      url: "https://www.youtube.com/results?search_query=badminton+clear+tutorial"
+      title: "匹克球新手體驗課",
+      category: "匹克球入門",
+      thumbnail: "./assets/videos/pickleball-intro.jpg",
+      url: "https://www.instagram.com/wings_badminton_hub/p/DaIFEjQp2cW/"
     },
     {
-      title: "雙打接發球前三拍",
-      category: "雙打戰術",
-      thumbnail:
-        "https://images.unsplash.com/photo-1599474924187-334a4ae5bd3c?auto=format&fit=crop&w=900&q=80",
-      url: "https://www.youtube.com/results?search_query=badminton+doubles+serve+receive"
+      title: "成人練打班實戰訓練",
+      category: "成人羽球",
+      thumbnail: "./assets/videos/adult-drill.jpg",
+      url: "https://www.instagram.com/wings_badminton_hub/reel/DZRUEKSAkLy/"
     },
     {
-      title: "米字步啟動與回位",
-      category: "腳步訓練",
-      thumbnail:
-        "https://images.unsplash.com/photo-1599058917212-d750089bc07e?auto=format&fit=crop&w=900&q=80",
-      url: "https://www.youtube.com/results?search_query=badminton+footwork+tutorial"
+      title: "兒童羽球團體課",
+      category: "兒童課程",
+      thumbnail: "./assets/videos/kids-class.jpg",
+      url: "https://www.instagram.com/wings_badminton_hub/reel/DZkWwtcgZhF/"
     }
   ],
   archiveVideos: [
     {
-      title: "春季團練回顧",
-      category: "團練紀錄",
-      thumbnail:
-        "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?auto=format&fit=crop&w=900&q=80",
-      url: "https://www.youtube.com/results?search_query=badminton+training+session"
+      title: "端午快閃團回顧",
+      category: "活動紀錄",
+      thumbnail: "./assets/videos/dragon-boat-recap.jpg",
+      url: "https://www.instagram.com/wings_badminton_hub/reel/DZy3QKKgbKM/"
     },
     {
-      title: "學員賽前訓練",
-      category: "過往活動",
-      thumbnail:
-        "https://images.unsplash.com/photo-1519861531473-9200262188bf?auto=format&fit=crop&w=900&q=80",
-      url: "https://www.youtube.com/results?search_query=badminton+match+training"
+      title: "大神仙帶小神仙",
+      category: "臨打精華",
+      thumbnail: "./assets/videos/rally-highlight.jpg",
+      url: "https://www.instagram.com/wings_badminton_hub/reel/DaF9bzTJkE2/"
+    },
+    {
+      title: "小黑教練精彩好球",
+      category: "教練精華",
+      thumbnail: "./assets/videos/coach-highlight.jpg",
+      url: "https://www.instagram.com/wings_badminton_hub/reel/DZDDIoqAdwI/"
     }
   ],
   contact: {

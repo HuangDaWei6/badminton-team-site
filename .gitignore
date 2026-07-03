@@ -1,0 +1,7 @@
+tmp/
+*.log
+*.tmp
+*.bak
+assets/drafts/
+assets/unused/
+assets/generated/
