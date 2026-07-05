@@ -318,25 +318,25 @@ window.siteData = {
     {
       title: "匹克球新手體驗課",
       category: "匹克球入門",
-      thumbnail: "./assets/videos/pickleball-intro.jpg",
+      thumbnail: "./assets/videos/pickleball-intro-frame.jpg",
       url: "https://www.instagram.com/reel/DZ5DiLrgicu/?igsh=MTl4eXJwczdhbWJwNA=="
     },
     {
       title: "成人練打班實戰訓練",
       category: "成人羽球",
-      thumbnail: "./assets/videos/adult-drill.jpg",
+      thumbnail: "./assets/videos/adult-drill-frame.jpg",
       url: "https://www.instagram.com/wings_badminton_hub/reel/DZRUEKSAkLy/"
     },
     {
       title: "兒童羽球團體課",
       category: "兒童課程",
-      thumbnail: "./assets/videos/kids-class.jpg",
+      thumbnail: "./assets/videos/kids-class-frame.jpg",
       url: "https://www.instagram.com/reel/DYPKvmAJZwG/?igsh=MWU5MjNybzZ0a2duZg=="
     },
     {
       title: "兒童夏令營",
       category: "兒童課程",
-      thumbnail: "./assets/videos/kids-class.jpg",
+      thumbnail: "./assets/videos/kids-camp-frame.jpg",
       url: "https://www.instagram.com/reel/DYyWha6pYl7/?igsh=Y3k1Y2xic3lrbXEz"
     }
   ],
@@ -344,19 +344,19 @@ window.siteData = {
     {
       title: "端午快閃團回顧",
       category: "活動紀錄",
-      thumbnail: "./assets/videos/dragon-boat-recap.jpg",
+      thumbnail: "./assets/videos/dragon-boat-recap-frame.jpg",
       url: "https://www.instagram.com/wings_badminton_hub/reel/DZy3QKKgbKM/"
     },
     {
       title: "大神仙帶小神仙",
       category: "臨打精華",
-      thumbnail: "./assets/videos/rally-highlight.jpg",
+      thumbnail: "./assets/videos/rally-highlight-frame.jpg",
       url: "https://www.instagram.com/wings_badminton_hub/reel/DaF9bzTJkE2/"
     },
     {
       title: "小黑教練精彩好球",
       category: "教練精華",
-      thumbnail: "./assets/videos/coach-highlight.jpg",
+      thumbnail: "./assets/videos/coach-highlight-frame.jpg",
       url: "https://www.instagram.com/wings_badminton_hub/reel/DZDDIoqAdwI/"
     }
   ],
