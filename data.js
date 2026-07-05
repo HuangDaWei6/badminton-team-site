@@ -221,6 +221,13 @@ window.siteData = {
           season: "NT$ 650 / 堂"
         },
         {
+          name: "兒童菁英班",
+          time: "週六 09:00-12:00",
+          level: "進階",
+          single: "NT$ 1,100 / 堂",
+          season: "NT$ 1,000 / 堂"
+        },
+        {
           name: "兒童團體班",
           time: "週六 09:00-12:00",
           level: "初階",

@@ -1,7 +1,7 @@
 (function () {
   const data = window.siteData;
   const boardBadmintonGoogleMap =
-    "https://www.google.com/maps/place/%E6%9D%BF%E6%A9%8B%E7%BE%BD%E7%90%83%E9%A4%A8/@25.0111713,121.4424233,17z/data=!4m10!1m2!2m1!1z5p2_5qmL576955CD6aSoIOaWsOWMl-W4guadv-api-WNgOWDkeS4reS4gOihlzEyNeW3tzE05byEMS0y6Jmf!3m6!1s0x34681defa61f0da1:0x13e136b782e8cab4!8m2!3d25.0111713!4d121.444612!15sCj_mnb_mqYvnvr3nkIPppKgg5paw5YyX5biC5p2_5qmL5Y2A5YOR5Lit5LiA6KGXMTI15be3MTTlvIQxLTLomZ-SARFiYWRtaW50b25fY29tcGxleOABAA!16s%2Fg%2F11wnzpqn4x?entry=ttu&g_ep=EgoyMDI2MDYyOS4wIKXMDSoASAFQAw%3D%3D";
+    "https://maps.app.goo.gl/g1Bk3X5LqeY1Cbe97";
 
   const $ = (selector, root = document) => root.querySelector(selector);
   const $$ = (selector, root = document) => Array.from(root.querySelectorAll(selector));
