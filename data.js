@@ -8,7 +8,7 @@ window.siteData = {
     stats: [
       { label: "課程項目", value: "羽球 / 匹克球" },
       { label: "適合程度", value: "兒童、成人初學到進階" },
-      { label: "報名方式", value: "LINE 或 Google 表單" }
+      { label: "報名方式", value: "LINE 諮詢" }
     ]
   },
   sportTracks: [

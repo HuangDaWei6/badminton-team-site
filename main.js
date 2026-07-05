@@ -55,7 +55,17 @@
     const stats = $("#hero-stats");
     data.hero.stats.forEach((stat) => {
       const item = createElement("div", "stat-item");
-      item.append(createElement("dt", "", stat.label), createElement("dd", "", stat.value));
+      const value = createElement("dd");
+      if (stat.label === "報名方式") {
+        const link = createElement("a", "", stat.value);
+        link.href = data.links.line;
+        link.target = "_blank";
+        link.rel = "noopener";
+        value.append(link);
+      } else {
+        value.textContent = stat.value;
+      }
+      item.append(createElement("dt", "", stat.label), value);
       stats.append(item);
     });
   }
