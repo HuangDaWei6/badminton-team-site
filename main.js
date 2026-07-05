@@ -266,10 +266,10 @@
       control.classList.add("is-playing");
       window.setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 430);
+      }, 720);
       window.setTimeout(() => {
         control.classList.remove("is-playing");
-      }, 920);
+      }, 1380);
     });
   }
 
