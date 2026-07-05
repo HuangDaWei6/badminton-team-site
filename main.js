@@ -54,6 +54,7 @@
     setLinks("[data-form-link]", data.links.googleForm);
     setLinks("[data-instagram-link]", data.links.instagram);
     setLinks("[data-facebook-link]", data.links.facebook);
+    setLinks("[data-email-link]", data.links.email);
 
     const stats = $("#hero-stats");
     data.hero.stats.forEach((stat) => {
@@ -242,6 +243,7 @@
   function renderContact() {
     setText("[data-contact-copy]", data.contact.copy);
     const target = $("#contact-list");
+    if (!target || !data.contact.items) return;
     data.contact.items.forEach((item) => {
       const row = createElement("div", "contact-item");
       row.append(createElement("span", "", item.label), createElement("strong", "", item.value));
