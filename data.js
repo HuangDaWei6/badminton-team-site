@@ -226,13 +226,6 @@ window.siteData = {
           level: "初階",
           single: "NT$ 850 / 堂",
           season: "NT$ 750 / 堂"
-        },
-        {
-          name: "兒童團體班",
-          time: "週六 15:00-18:00",
-          level: "初階",
-          single: "NT$ 850 / 堂",
-          season: "NT$ 750 / 堂"
         }
       ]
     },
