@@ -414,6 +414,31 @@ h3 {
   font-weight: 800;
 }
 
+.map-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.map-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 7px 12px;
+  border: 1px solid rgba(20, 104, 79, 0.28);
+  border-radius: 8px;
+  color: var(--court-dark);
+  font-size: 14px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.map-link:hover {
+  border-color: var(--court);
+  background: rgba(20, 104, 79, 0.08);
+}
+
 .promo-panel {
   background: var(--court-dark);
   color: #ffffff;

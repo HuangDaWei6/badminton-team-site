@@ -22,6 +22,18 @@
     return element;
   }
 
+  function createMapLink(type, location) {
+    const query = encodeURIComponent(`${location.name} ${location.address}`);
+    const link = createElement("a", "map-link", type === "google" ? "Google Map" : "Apple Map");
+    link.href =
+      type === "google"
+        ? `https://www.google.com/maps/search/?api=1&query=${query}`
+        : `https://maps.apple.com/?q=${query}`;
+    link.target = "_blank";
+    link.rel = "noopener";
+    return link;
+  }
+
   function renderHero() {
     setText("[data-site-name]", data.siteName);
     setText("[data-footer-name]", data.siteName);
@@ -110,10 +122,13 @@
     const locations = $("#location-list");
     data.locations.forEach((location) => {
       const item = createElement("article", "location-item");
+      const links = createElement("div", "map-links");
+      links.append(createMapLink("google", location), createMapLink("apple", location));
       item.append(
         createElement("h3", "", location.name),
         createElement("p", "", location.address),
-        createElement("span", "meta-line", location.time)
+        createElement("span", "meta-line", location.time),
+        links
       );
       locations.append(item);
     });

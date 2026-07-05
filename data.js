@@ -30,7 +30,7 @@ window.siteData = {
     }
   ],
   links: {
-    line: "https://line.me/R/ti/p/@your-line-id",
+    line: "https://line.me/R/ti/p/@237edeto",
     googleForm: "https://forms.gle/your-google-form-id",
     instagram: "https://www.instagram.com/wings_badminton_hub/",
     facebook: "https://www.facebook.com/p/%E7%BE%BD%E7%BF%BC%E7%BE%BD%E7%90%83-61584314604572/"
@@ -257,7 +257,7 @@ window.siteData = {
     copy:
       "想詢問課程、開團或合作邀約，可以直接加 LINE，或先填 Google 表單留下程度、可上課時段與目標。",
     items: [
-      { label: "LINE", value: "@your-line-id" },
+      { label: "LINE", value: "@237edeto" },
       { label: "Email", value: "coach@example.com" },
       { label: "Instagram", value: "@wings_badminton_hub" },
       { label: "Facebook", value: "羽翼羽球" }
