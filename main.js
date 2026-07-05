@@ -246,6 +246,23 @@
     });
   }
 
+  function initBackToTop() {
+    const control = $(".back-to-top");
+    if (!control) return;
+    control.addEventListener("click", (event) => {
+      event.preventDefault();
+      if (control.classList.contains("is-playing")) return;
+
+      control.classList.add("is-playing");
+      window.setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }, 430);
+      window.setTimeout(() => {
+        control.classList.remove("is-playing");
+      }, 920);
+    });
+  }
+
   renderHero();
   renderSportTracks();
   renderCoaches();
@@ -257,4 +274,5 @@
   renderVideos(data.trainingVideos, "#training-video-list");
   renderVideos(data.archiveVideos, "#archive-video-list");
   renderContact();
+  initBackToTop();
 })();

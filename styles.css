@@ -692,14 +692,138 @@ h3 {
   justify-content: center;
   width: 48px;
   height: 48px;
-  background: var(--energy);
+  overflow: visible;
+  background: transparent;
   color: var(--ink);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+  border: 0;
   border-radius: 999px;
-  box-shadow: var(--shadow);
   font-size: 26px;
   font-weight: 900;
   text-decoration: none;
+}
+
+.back-to-top-ball {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 32% 35%, rgba(255, 255, 255, 0.46) 0 8%, transparent 9%),
+    radial-gradient(circle at 36% 62%, rgba(9, 43, 34, 0.26) 0 5%, transparent 6%),
+    radial-gradient(circle at 56% 43%, rgba(9, 43, 34, 0.24) 0 5%, transparent 6%),
+    radial-gradient(circle at 64% 66%, rgba(9, 43, 34, 0.22) 0 5%, transparent 6%),
+    var(--energy);
+  box-shadow: var(--shadow);
+}
+
+.back-to-top-arrow {
+  position: relative;
+  z-index: 3;
+  line-height: 1;
+}
+
+.back-to-top-paddle {
+  position: absolute;
+  right: -72px;
+  bottom: 9px;
+  z-index: 1;
+  width: 54px;
+  height: 34px;
+  border: 3px solid #0f2e2f;
+  border-radius: 48% 52% 52% 48%;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.24), transparent 42%),
+    #0f766e;
+  opacity: 0;
+  transform: translateX(0) rotate(22deg);
+  transform-origin: 78% 50%;
+  pointer-events: none;
+}
+
+.back-to-top-paddle::after {
+  content: "";
+  position: absolute;
+  right: -28px;
+  top: 12px;
+  width: 32px;
+  height: 9px;
+  border-radius: 999px;
+  background: #52321f;
+  box-shadow: inset -8px 0 rgba(255, 255, 255, 0.18);
+}
+
+.back-to-top.is-playing .back-to-top-arrow {
+  animation: top-arrow-hide 760ms ease both;
+}
+
+.back-to-top.is-playing .back-to-top-ball {
+  animation: pickleball-launch 860ms cubic-bezier(0.22, 0.72, 0.2, 1) both;
+}
+
+.back-to-top.is-playing .back-to-top-paddle {
+  animation: paddle-swing 620ms cubic-bezier(0.2, 0.84, 0.32, 1) both;
+}
+
+@keyframes paddle-swing {
+  0% {
+    opacity: 0;
+    transform: translateX(40px) rotate(24deg);
+  }
+  30% {
+    opacity: 1;
+    transform: translateX(-52px) rotate(10deg);
+  }
+  48% {
+    opacity: 1;
+    transform: translateX(-78px) rotate(-26deg);
+  }
+  70% {
+    opacity: 1;
+    transform: translateX(-48px) rotate(2deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(36px) rotate(24deg);
+  }
+}
+
+@keyframes pickleball-launch {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0);
+  }
+  34% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1) rotate(0);
+  }
+  72% {
+    opacity: 1;
+    transform: translate(-16px, -118px) scale(0.7) rotate(-210deg);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-20px, -190px) scale(0.4) rotate(-360deg);
+  }
+}
+
+@keyframes top-arrow-hide {
+  0%,
+  28% {
+    opacity: 1;
+  }
+  36%,
+  100% {
+    opacity: 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .back-to-top.is-playing .back-to-top-arrow,
+  .back-to-top.is-playing .back-to-top-ball,
+  .back-to-top.is-playing .back-to-top-paddle {
+    animation: none;
+  }
 }
 
 @media (max-width: 900px) {
