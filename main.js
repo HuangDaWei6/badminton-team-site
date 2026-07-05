@@ -90,6 +90,37 @@
     });
   }
 
+  function initCoachCarousel() {
+    const list = $("#coach-list");
+    const previous = $(".carousel-button-prev");
+    const next = $(".carousel-button-next");
+    if (!list || !previous || !next) return;
+
+    const getStep = () => {
+      const card = list.querySelector(".coach-card");
+      if (!card) return list.clientWidth;
+      const styles = window.getComputedStyle(list);
+      const gap = Number.parseFloat(styles.columnGap || styles.gap) || 18;
+      return card.getBoundingClientRect().width + gap;
+    };
+
+    const updateButtons = () => {
+      const maxScroll = list.scrollWidth - list.clientWidth - 2;
+      previous.disabled = list.scrollLeft <= 2;
+      next.disabled = list.scrollLeft >= maxScroll;
+    };
+
+    previous.addEventListener("click", () => {
+      list.scrollBy({ left: -getStep(), behavior: "smooth" });
+    });
+    next.addEventListener("click", () => {
+      list.scrollBy({ left: getStep(), behavior: "smooth" });
+    });
+    list.addEventListener("scroll", updateButtons, { passive: true });
+    window.addEventListener("resize", updateButtons);
+    updateButtons();
+  }
+
   function renderSportTracks() {
     const target = $("#program-list");
     if (!target) return;
@@ -266,16 +297,17 @@
       control.classList.add("is-playing");
       window.setTimeout(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 880);
+      }, 1040);
       window.setTimeout(() => {
         control.classList.remove("is-playing");
-      }, 1640);
+      }, 1840);
     });
   }
 
   renderHero();
   renderSportTracks();
   renderCoaches();
+  initCoachCarousel();
   renderPhilosophy();
   renderPricing();
   renderRegularClasses();
