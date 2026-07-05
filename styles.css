@@ -281,6 +281,13 @@ h3 {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.coach-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 12px;
+}
+
 .coach-card,
 .program-card,
 .price-card,
@@ -297,7 +304,9 @@ h3 {
 }
 
 .coach-card {
+  flex: 0 0 calc((100% - 18px) / 2);
   overflow: hidden;
+  scroll-snap-align: start;
 }
 
 .coach-card img {
@@ -415,6 +424,24 @@ h3 {
 .schedule-header p {
   margin-top: 4px;
   color: var(--muted);
+}
+
+.schedule-map-link,
+.schedule-address-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.schedule-address-link {
+  display: inline-block;
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.schedule-map-link:hover,
+.schedule-address-link:hover {
+  color: var(--court-dark);
+  text-decoration: underline;
 }
 
 .schedule-table-wrap {
@@ -650,12 +677,15 @@ h3 {
 
   .hero-stats,
   .program-grid,
-  .coach-grid,
   .feature-grid,
   .pricing-grid,
   .video-grid,
   .contact-list {
     grid-template-columns: 1fr;
+  }
+
+  .coach-card {
+    flex-basis: min(86vw, 420px);
   }
 
   .split-section,

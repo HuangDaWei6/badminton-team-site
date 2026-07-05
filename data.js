@@ -148,15 +148,15 @@ window.siteData = {
   pricing: [
     {
       name: "奧創體育 - 板橋館常態班",
-      price: "NT$ 550 起 / 堂",
-      note: "週末兒童團體班與成人練打班，依單次、季繳新生、季繳舊生計價。",
-      items: ["兒童團體班：NT$ 550-700 / 堂", "成人練打班：NT$ 600-750 / 堂", "兒童 8 人班，成人 6 人班"]
+      price: "NT$ 600 起 / 堂",
+      note: "週末兒童團體班與成人練打班，依單次或季繳方式計價。",
+      items: ["兒童團體班：NT$ 600-700 / 堂", "成人練打班：NT$ 650-750 / 堂", "兒童 8 人班，成人 6 人班"]
     },
     {
       name: "板橋羽球館常態班",
-      price: "NT$ 600 起 / 堂",
-      note: "週一成人練打、週六兒童菁英班與兒童團體班，費用已包含場地費。",
-      items: ["成人練打班：NT$ 600-750 / 堂", "兒童團體班：NT$ 700-850 / 堂", "兒童菁英班：NT$ 900-1,100 / 堂"]
+      price: "NT$ 650 起 / 堂",
+      note: "週一成人練打與週六兒童團體班，費用已包含場地費。",
+      items: ["成人練打班：NT$ 650-750 / 堂", "兒童團體班：NT$ 750-850 / 堂", "依單次或季繳方式計價"]
     },
     {
       name: "家教班 / 親子班",
@@ -176,40 +176,35 @@ window.siteData = {
           time: "週六 14:00-16:00",
           level: "初階 / 進階",
           single: "NT$ 700 / 堂",
-          seasonNew: "NT$ 600 / 堂",
-          seasonReturning: "NT$ 550 / 堂"
+          season: "NT$ 600 / 堂"
         },
         {
           name: "成人練打班",
           time: "週六 16:00-18:00",
           level: "初階 / 中階 / 高階",
           single: "NT$ 750 / 堂",
-          seasonNew: "NT$ 650 / 堂",
-          seasonReturning: "NT$ 600 / 堂"
+          season: "NT$ 650 / 堂"
         },
         {
           name: "兒童團體班",
           time: "週六 18:00-20:00",
           level: "初階",
           single: "NT$ 700 / 堂",
-          seasonNew: "NT$ 600 / 堂",
-          seasonReturning: "NT$ 550 / 堂"
+          season: "NT$ 600 / 堂"
         },
         {
           name: "兒童團體班",
           time: "週日 14:00-16:00",
           level: "初階 / 進階",
           single: "NT$ 700 / 堂",
-          seasonNew: "NT$ 600 / 堂",
-          seasonReturning: "NT$ 550 / 堂"
+          season: "NT$ 600 / 堂"
         },
         {
           name: "兒童團體班",
           time: "週日 16:00-18:00",
           level: "初階",
           single: "NT$ 700 / 堂",
-          seasonNew: "NT$ 600 / 堂",
-          seasonReturning: "NT$ 550 / 堂"
+          season: "NT$ 600 / 堂"
         }
       ]
     },
@@ -223,32 +218,21 @@ window.siteData = {
           time: "週一 20:30-22:30",
           level: "成人",
           single: "NT$ 750 / 堂",
-          seasonNew: "NT$ 650 / 堂",
-          seasonReturning: "NT$ 600 / 堂"
-        },
-        {
-          name: "兒童菁英班",
-          time: "週六 09:00-12:00",
-          level: "進階",
-          single: "NT$ 1,100 / 堂",
-          seasonNew: "NT$ 1,000 / 堂",
-          seasonReturning: "NT$ 900 / 堂"
+          season: "NT$ 650 / 堂"
         },
         {
           name: "兒童團體班",
           time: "週六 09:00-12:00",
           level: "初階",
           single: "NT$ 850 / 堂",
-          seasonNew: "NT$ 750 / 堂",
-          seasonReturning: "NT$ 700 / 堂"
+          season: "NT$ 750 / 堂"
         },
         {
           name: "兒童團體班",
           time: "週六 15:00-18:00",
           level: "初階",
           single: "NT$ 850 / 堂",
-          seasonNew: "NT$ 750 / 堂",
-          seasonReturning: "NT$ 700 / 堂"
+          season: "NT$ 750 / 堂"
         }
       ]
     },
@@ -262,32 +246,28 @@ window.siteData = {
           time: "時段可討論",
           level: "客製化",
           single: "NT$ 1,500 / 小時",
-          seasonNew: "NT$ 1,350 / 小時",
-          seasonReturning: "同季繳價"
+          season: "NT$ 1,350 / 小時"
         },
         {
           name: "一對二家教班 / 親子班",
           time: "時段可討論",
           level: "客製化",
           single: "NT$ 800 / 人 / 小時",
-          seasonNew: "NT$ 725 / 人 / 小時",
-          seasonReturning: "同季繳價"
+          season: "NT$ 725 / 人 / 小時"
         },
         {
           name: "一對三家教班 / 親子班",
           time: "時段可討論",
           level: "客製化",
           single: "NT$ 600 / 人 / 小時",
-          seasonNew: "NT$ 550 / 人 / 小時",
-          seasonReturning: "同季繳價"
+          season: "NT$ 550 / 人 / 小時"
         },
         {
           name: "一對四家教班 / 親子班",
           time: "時段可討論",
           level: "客製化",
           single: "NT$ 460 / 人 / 小時",
-          seasonNew: "NT$ 425 / 人 / 小時",
-          seasonReturning: "同季繳價"
+          season: "NT$ 425 / 人 / 小時"
         }
       ]
     }
@@ -316,9 +296,9 @@ window.siteData = {
   ],
   sessions: [
     {
-      title: "羽球兒童團體班",
+      title: "親子團",
       level: "初階 / 進階",
-      date: "週末常態班",
+      date: "每週日 14:00-16:00、16:00-18:00",
       location: "奧創體育 - 板橋館、板橋羽球館",
       status: "招募中",
       formLabel: "詢問班級"

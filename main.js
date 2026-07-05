@@ -22,6 +22,11 @@
     return element;
   }
 
+  function getGoogleMapUrl(location) {
+    const query = encodeURIComponent(`${location.name || location.venue} ${location.address}`);
+    return `https://www.google.com/maps/search/?api=1&query=${query}`;
+  }
+
   function createMapLink(type, location) {
     const query = encodeURIComponent(`${location.name} ${location.address}`);
     const link = createElement("a", "map-link", type === "google" ? "Google Map" : "Apple Map");
@@ -125,13 +130,26 @@
     data.regularClasses.forEach((group) => {
       const card = createElement("article", "schedule-card");
       const header = createElement("div", "schedule-header");
-      header.append(createElement("h3", "", group.venue), createElement("p", "", group.address));
+      const mapUrl = getGoogleMapUrl(group);
+      const venueLink = createElement("a", "schedule-map-link", group.venue);
+      venueLink.href = mapUrl;
+      venueLink.target = "_blank";
+      venueLink.rel = "noopener";
+
+      const addressLink = createElement("a", "schedule-address-link", group.address);
+      addressLink.href = mapUrl;
+      addressLink.target = "_blank";
+      addressLink.rel = "noopener";
+
+      const title = createElement("h3");
+      title.append(venueLink);
+      header.append(title, addressLink);
 
       const tableWrap = createElement("div", "schedule-table-wrap");
       const table = createElement("table", "schedule-table");
       const thead = document.createElement("thead");
       const headRow = document.createElement("tr");
-      ["課程", "時間", "程度", "單次", "季繳新生", "季繳舊生"].forEach((label) => {
+      ["課程", "時間", "程度", "單次", "季繳"].forEach((label) => {
         headRow.append(createElement("th", "", label));
       });
       thead.append(headRow);
@@ -139,7 +157,7 @@
       const tbody = document.createElement("tbody");
       group.courses.forEach((course) => {
         const row = document.createElement("tr");
-        [course.name, course.time, course.level, course.single, course.seasonNew, course.seasonReturning].forEach((value) => {
+        [course.name, course.time, course.level, course.single, course.season].forEach((value) => {
           row.append(createElement("td", "", value));
         });
         tbody.append(row);
