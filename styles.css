@@ -395,6 +395,70 @@ h3 {
   font-weight: 900;
 }
 
+.schedule-list {
+  display: grid;
+  gap: 18px;
+}
+
+.schedule-card {
+  overflow: hidden;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.schedule-header {
+  padding: 22px 24px 14px;
+}
+
+.schedule-header p {
+  margin-top: 4px;
+  color: var(--muted);
+}
+
+.schedule-table-wrap {
+  overflow-x: auto;
+}
+
+.schedule-table {
+  width: 100%;
+  min-width: 780px;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 14px 16px;
+  border-top: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+.schedule-table th {
+  background: rgba(20, 104, 79, 0.08);
+  color: var(--court-dark);
+  font-size: 14px;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.schedule-table td {
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.schedule-table td:first-child,
+.schedule-table td:nth-child(2) {
+  color: var(--ink);
+}
+
+.schedule-note {
+  padding: 14px 24px 22px;
+  color: var(--court-dark);
+  font-weight: 800;
+}
+
 .two-column {
   display: grid;
   grid-template-columns: minmax(0, 1.25fr) minmax(300px, 0.75fr);

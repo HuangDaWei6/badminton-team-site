@@ -147,22 +147,149 @@ window.siteData = {
   },
   pricing: [
     {
-      name: "羽球私人課",
-      price: "NT$ 1,200 起",
-      note: "1 對 1 客製化訓練，適合快速修正動作。",
-      items: ["60 分鐘", "課前程度評估", "課後練習建議"]
+      name: "奧創體育 - 板橋館常態班",
+      price: "NT$ 550 起 / 堂",
+      note: "週末兒童團體班與成人練打班，依單次、季繳新生、季繳舊生計價。",
+      items: ["兒童團體班：NT$ 550-700 / 堂", "成人練打班：NT$ 600-750 / 堂", "兒童 8 人班，成人 6 人班"]
     },
     {
-      name: "羽球小班 / 親子班",
-      price: "NT$ 1,800 起",
-      note: "適合朋友、親子或固定搭檔一起練習。",
-      items: ["90 分鐘", "雙打配合訓練", "共同目標安排"]
+      name: "板橋羽球館常態班",
+      price: "NT$ 600 起 / 堂",
+      note: "週一成人練打、週六兒童菁英班與兒童團體班，費用已包含場地費。",
+      items: ["成人練打班：NT$ 600-750 / 堂", "兒童團體班：NT$ 700-850 / 堂", "兒童菁英班：NT$ 900-1,100 / 堂"]
     },
     {
-      name: "匹克球體驗課",
-      price: "NT$ 500 起",
-      note: "規則簡單、容易上手，適合新手與親子一起體驗。",
-      items: ["新手入門", "4 人開班、6 人滿班", "揮拍、對戰與規則教學"]
+      name: "家教班 / 親子班",
+      price: "NT$ 425 起 / 人 / 小時",
+      note: "大台北地區球館皆可討論，可依人數、程度與目標安排訓練。",
+      items: ["一對一：NT$ 1,350-1,500 / 小時", "一對二：NT$ 725-800 / 人 / 小時", "一對三至四：NT$ 425-600 / 人 / 小時"]
+    }
+  ],
+  regularClasses: [
+    {
+      venue: "奧創體育 - 板橋館",
+      address: "新北市板橋區中正路375巷1號2樓",
+      note: "兒童團體班皆為 8 人班，成人班為 6 人班。",
+      courses: [
+        {
+          name: "兒童團體班",
+          time: "週六 14:00-16:00",
+          level: "初階 / 進階",
+          single: "NT$ 700 / 堂",
+          seasonNew: "NT$ 600 / 堂",
+          seasonReturning: "NT$ 550 / 堂"
+        },
+        {
+          name: "成人練打班",
+          time: "週六 16:00-18:00",
+          level: "初階 / 中階 / 高階",
+          single: "NT$ 750 / 堂",
+          seasonNew: "NT$ 650 / 堂",
+          seasonReturning: "NT$ 600 / 堂"
+        },
+        {
+          name: "兒童團體班",
+          time: "週六 18:00-20:00",
+          level: "初階",
+          single: "NT$ 700 / 堂",
+          seasonNew: "NT$ 600 / 堂",
+          seasonReturning: "NT$ 550 / 堂"
+        },
+        {
+          name: "兒童團體班",
+          time: "週日 14:00-16:00",
+          level: "初階 / 進階",
+          single: "NT$ 700 / 堂",
+          seasonNew: "NT$ 600 / 堂",
+          seasonReturning: "NT$ 550 / 堂"
+        },
+        {
+          name: "兒童團體班",
+          time: "週日 16:00-18:00",
+          level: "初階",
+          single: "NT$ 700 / 堂",
+          seasonNew: "NT$ 600 / 堂",
+          seasonReturning: "NT$ 550 / 堂"
+        }
+      ]
+    },
+    {
+      venue: "板橋羽球館",
+      address: "新北市板橋區僑中一街125巷14弄1-2號",
+      note: "以下費用均包含場地費。",
+      courses: [
+        {
+          name: "成人練打班",
+          time: "週一 20:30-22:30",
+          level: "成人",
+          single: "NT$ 750 / 堂",
+          seasonNew: "NT$ 650 / 堂",
+          seasonReturning: "NT$ 600 / 堂"
+        },
+        {
+          name: "兒童菁英班",
+          time: "週六 09:00-12:00",
+          level: "進階",
+          single: "NT$ 1,100 / 堂",
+          seasonNew: "NT$ 1,000 / 堂",
+          seasonReturning: "NT$ 900 / 堂"
+        },
+        {
+          name: "兒童團體班",
+          time: "週六 09:00-12:00",
+          level: "初階",
+          single: "NT$ 850 / 堂",
+          seasonNew: "NT$ 750 / 堂",
+          seasonReturning: "NT$ 700 / 堂"
+        },
+        {
+          name: "兒童團體班",
+          time: "週六 15:00-18:00",
+          level: "初階",
+          single: "NT$ 850 / 堂",
+          seasonNew: "NT$ 750 / 堂",
+          seasonReturning: "NT$ 700 / 堂"
+        }
+      ]
+    },
+    {
+      venue: "家教班 / 親子班",
+      address: "大台北地區球館皆可討論",
+      note: "適合希望彈性安排時段、地點與人數的學員。",
+      courses: [
+        {
+          name: "一對一家教班",
+          time: "時段可討論",
+          level: "客製化",
+          single: "NT$ 1,500 / 小時",
+          seasonNew: "NT$ 1,350 / 小時",
+          seasonReturning: "同季繳價"
+        },
+        {
+          name: "一對二家教班 / 親子班",
+          time: "時段可討論",
+          level: "客製化",
+          single: "NT$ 800 / 人 / 小時",
+          seasonNew: "NT$ 725 / 人 / 小時",
+          seasonReturning: "同季繳價"
+        },
+        {
+          name: "一對三家教班 / 親子班",
+          time: "時段可討論",
+          level: "客製化",
+          single: "NT$ 600 / 人 / 小時",
+          seasonNew: "NT$ 550 / 人 / 小時",
+          seasonReturning: "同季繳價"
+        },
+        {
+          name: "一對四家教班 / 親子班",
+          time: "時段可討論",
+          level: "客製化",
+          single: "NT$ 460 / 人 / 小時",
+          seasonNew: "NT$ 425 / 人 / 小時",
+          seasonReturning: "同季繳價"
+        }
+      ]
     }
   ],
   locations: [
@@ -173,7 +300,7 @@ window.siteData = {
     },
     {
       name: "板橋羽球館",
-      address: "新北市板橋區橋中一街125巷14弄1-2號",
+      address: "新北市板橋區僑中一街125巷14弄1-2號",
       time: "羽球課程與匹克球體驗課"
     }
   ],

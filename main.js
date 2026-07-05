@@ -118,6 +118,40 @@
     });
   }
 
+  function renderRegularClasses() {
+    const target = $("#regular-class-list");
+    if (!target || !data.regularClasses) return;
+
+    data.regularClasses.forEach((group) => {
+      const card = createElement("article", "schedule-card");
+      const header = createElement("div", "schedule-header");
+      header.append(createElement("h3", "", group.venue), createElement("p", "", group.address));
+
+      const tableWrap = createElement("div", "schedule-table-wrap");
+      const table = createElement("table", "schedule-table");
+      const thead = document.createElement("thead");
+      const headRow = document.createElement("tr");
+      ["課程", "時間", "程度", "單次", "季繳新生", "季繳舊生"].forEach((label) => {
+        headRow.append(createElement("th", "", label));
+      });
+      thead.append(headRow);
+
+      const tbody = document.createElement("tbody");
+      group.courses.forEach((course) => {
+        const row = document.createElement("tr");
+        [course.name, course.time, course.level, course.single, course.seasonNew, course.seasonReturning].forEach((value) => {
+          row.append(createElement("td", "", value));
+        });
+        tbody.append(row);
+      });
+
+      table.append(thead, tbody);
+      tableWrap.append(table);
+      card.append(header, tableWrap, createElement("p", "schedule-note", group.note));
+      target.append(card);
+    });
+  }
+
   function renderLocationsAndPromos() {
     const locations = $("#location-list");
     data.locations.forEach((location) => {
@@ -197,6 +231,7 @@
   renderCoaches();
   renderPhilosophy();
   renderPricing();
+  renderRegularClasses();
   renderLocationsAndPromos();
   renderSessions();
   renderVideos(data.trainingVideos, "#training-video-list");
