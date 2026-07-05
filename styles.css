@@ -203,12 +203,37 @@ h3 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 10px;
   min-height: 46px;
   padding: 12px 18px;
   border: 1px solid transparent;
   border-radius: 6px;
   font-weight: 900;
   line-height: 1.2;
+}
+
+.button-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.3);
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.button-email strong,
+.button-email small {
+  display: block;
+}
+
+.button-email small {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 800;
 }
 
 .button-primary {

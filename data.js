@@ -326,7 +326,7 @@ window.siteData = {
       title: "匹克球新手體驗課",
       category: "匹克球入門",
       thumbnail: "./assets/videos/pickleball-intro.jpg",
-      url: "https://www.instagram.com/wings_badminton_hub/p/DaIFEjQp2cW/"
+      url: "https://www.instagram.com/reel/DZ5DiLrgicu/?igsh=MTl4eXJwczdhbWJwNA=="
     },
     {
       title: "成人練打班實戰訓練",
@@ -338,7 +338,13 @@ window.siteData = {
       title: "兒童羽球團體課",
       category: "兒童課程",
       thumbnail: "./assets/videos/kids-class.jpg",
-      url: "https://www.instagram.com/wings_badminton_hub/reel/DZkWwtcgZhF/"
+      url: "https://www.instagram.com/reel/DYPKvmAJZwG/?igsh=MWU5MjNybzZ0a2duZg=="
+    },
+    {
+      title: "兒童夏令營",
+      category: "兒童課程",
+      thumbnail: "./assets/videos/kids-class.jpg",
+      url: "https://www.instagram.com/reel/DYyWha6pYl7/?igsh=Y3k1Y2xic3lrbXEz"
     }
   ],
   archiveVideos: [
