@@ -302,15 +302,8 @@ window.siteData = {
       date: "每週日 14:00-16:00、16:00-18:00",
       location: "奧創體育 - 板橋館、板橋羽球館",
       status: "招募中",
-      formLabel: "詢問班級"
-    },
-    {
-      title: "羽球成人練打班",
-      level: "初階 / 中階 / 高階",
-      date: "依 IG 公告時段",
-      location: "奧創體育 - 板橋館、板橋羽球館",
-      status: "開放詢問",
-      formLabel: "詢問時段"
+      formLabel: "LINE社群",
+      link: "https://line.me/ti/g2/EMfSPKO66YlRxfL1BrNetQdoLSibQe-2zIsIRw?utm_source=invitation&utm_medium=link_copy&utm_campaign=default"
     },
     {
       title: "匹克球體驗課",

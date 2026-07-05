@@ -32,13 +32,9 @@
     return `https://www.google.com/maps/search/?api=1&query=${query}`;
   }
 
-  function createMapLink(type, location) {
-    const query = encodeURIComponent(`${location.name} ${location.address}`);
-    const link = createElement("a", "map-link", type === "google" ? "Google Map" : "Apple Map");
-    link.href =
-      type === "google"
-        ? getGoogleMapUrl(location)
-        : `https://maps.apple.com/?q=${query}`;
+  function createMapLink(location) {
+    const link = createElement("a", "map-link", "Google Map");
+    link.href = getGoogleMapUrl(location);
     link.target = "_blank";
     link.rel = "noopener";
     return link;
@@ -181,7 +177,7 @@
     data.locations.forEach((location) => {
       const item = createElement("article", "location-item");
       const links = createElement("div", "map-links");
-      links.append(createMapLink("google", location), createMapLink("apple", location));
+      links.append(createMapLink(location));
       item.append(
         createElement("h3", "", location.name),
         createElement("p", "", location.address),
@@ -212,7 +208,7 @@
       );
 
       const link = createElement("a", "button button-small", session.formLabel);
-      link.href = data.links.googleForm;
+      link.href = session.link || data.links.googleForm;
       link.target = "_blank";
       link.rel = "noopener";
       card.append(info, link);

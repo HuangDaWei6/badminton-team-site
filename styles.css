@@ -213,16 +213,10 @@ h3 {
 }
 
 .button-icon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
   flex: 0 0 28px;
   width: 28px;
   height: 28px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.3);
-  font-size: 12px;
-  font-weight: 900;
+  object-fit: contain;
 }
 
 .button-email strong,
@@ -520,6 +514,7 @@ h3 {
 
 .location-list {
   display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 14px;
 }
 
@@ -558,6 +553,14 @@ h3 {
 .promo-panel {
   background: var(--court-dark);
   color: #ffffff;
+}
+
+.promo-section {
+  padding-top: 42px;
+}
+
+.promo-section .promo-panel {
+  padding: 34px;
 }
 
 .promo-panel .eyebrow {
@@ -679,6 +682,26 @@ h3 {
   font-weight: 900;
 }
 
+.back-to-top {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 30;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--energy);
+  color: var(--ink);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  font-size: 26px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
 @media (max-width: 900px) {
   .site-header {
     position: static;
@@ -704,6 +727,7 @@ h3 {
   .program-grid,
   .feature-grid,
   .pricing-grid,
+  .location-list,
   .video-grid,
   .contact-list {
     grid-template-columns: 1fr;
