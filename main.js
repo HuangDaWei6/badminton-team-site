@@ -179,9 +179,7 @@
       const links = createElement("div", "map-links");
       links.append(createMapLink(location));
       item.append(
-        createElement("h3", "", location.name),
         createElement("p", "", location.address),
-        createElement("span", "meta-line", location.time),
         links
       );
       locations.append(item);
