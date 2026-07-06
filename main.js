@@ -288,19 +288,11 @@
   }
 
   function initBackToTop() {
-    const control = $(".back-to-top");
-    if (!control) return;
-    control.addEventListener("click", (event) => {
-      event.preventDefault();
-      if (control.classList.contains("is-playing")) return;
+    const button = $(".back-to-top");
+    if (!button) return;
 
-      control.classList.add("is-playing");
-      window.setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-      }, 720);
-      window.setTimeout(() => {
-        control.classList.remove("is-playing");
-      }, 1380);
+    button.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     });
   }
 

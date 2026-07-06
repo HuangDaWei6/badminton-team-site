@@ -31,7 +31,7 @@ window.siteData = {
   ],
   links: {
     line: "https://line.me/R/ti/p/@237edeto",
-    googleForm: "https://forms.gle/your-google-form-id",
+    googleForm: "https://docs.google.com/forms/d/e/1FAIpQLSfLfXjKgs6cCFGj98kPW9nb5ifOWyMOjRKwhOjdROZ_fB_H5A/viewform",
     instagram: "https://www.instagram.com/wings_badminton_hub/",
     facebook: "https://www.facebook.com/p/%E7%BE%BD%E7%BF%BC%E7%BE%BD%E7%90%83-61584314604572/",
     email: "mailto:wingsbadminton@gmail.com"
